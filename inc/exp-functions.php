@@ -160,23 +160,20 @@ function get_category_sub_menu_item() {
 	$args = array(
 		'type'                     => 'post',
 		'child_of'                 => 0,
-		'parent'                   => '',
 		'orderby'                  => 'name',
 		'order'                    => 'ASC',
 		'hide_empty'               => 1,
 		'hierarchical'             => 1,
-		'exclude'                  => '',
-		'include'                  => '',
-		'number'                   => '',
 		'taxonomy'                 => 'category',
 		'pad_counts'               => false
 
 	);
 	$categories = get_categories( $args );
+	$catlist = '';
 	foreach ( $categories as $cat ) {
 		$catlist .= '<li><a href="' . get_category_link( $cat->term_id ) . '">' . $cat->name . '</a></li>';
 	}
-	$catlist .= '</ul></li>';
+	// $catlist .= '</ul></li>';
 
 	return $catlist;
 }
