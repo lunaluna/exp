@@ -1,0 +1,33 @@
+
+/* =========================================================
+   Accessibility
+========================================================= */
+.screen-reader-text {
+  display: none;
+}
+
+/* =========================================================
+   nav-links
+========================================================= */
+.nav-links {
+  overflow: hidden;
+  margin: 1em;
+}
+
+.nav-links .nav-previous {
+  float: left;
+  display: inline-block;
+}
+
+.nav-links .nav-previous::before {
+  content: "< ";
+}
+
+.nav-links .nav-next {
+  float: right;
+  display: inline-block;
+}
+
+.nav-links .nav-next::after {
+  content: " >";
+}

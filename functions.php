@@ -115,6 +115,7 @@ function exp_scripts() {
 
   // stylesheets
   wp_enqueue_style( 'app', get_stylesheet_directory_uri() . '/assets/css/app.css' );
+  wp_enqueue_style( 'add', get_stylesheet_directory_uri() . '/assets/css/add.css' );
 
   // javascripts
   wp_deregister_script( 'jquery' );
